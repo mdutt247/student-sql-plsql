@@ -1,0 +1,55 @@
+--Creating a function
+
+create or replace function rating_message(rating IN NUMBER) return VARCHAR2
+AS
+BEGIN
+IF rating > 7 THEN
+return 'You are great';
+ELSIF rating >= 5 THEN
+return 'Not bad';
+ELSE
+return 'Pretty bad';
+END IF;
+END;
+/
+
+
+--Calling a function
+
+declare
+paulRate:=9;
+Begin
+dbms_output.put_line(ratingMessage(paulRate));
+end;
+/
+
+
+
+--create or replace function squareNumber(num in number) Return number 
+--IS
+--begin
+--dbms_output.put('Square of ' || num || ' is: ');
+--return num*num;
+--end;
+--/
+
+--USE 1
+
+--begin
+--dbms_output.put_line('=======================');
+--dbms_output.put_line(squareNumber(3.5));
+--dbms_output.put_line('=======================');
+--end;
+--/
+
+--USE 2
+
+--declare
+--n number;
+--begin
+--n := &enter_a_number;
+--dbms_output.put_line('=======================');
+--dbms_output.put_line(squareNumber(n));
+--dbms_output.put_line('=======================');
+--end;
+--/

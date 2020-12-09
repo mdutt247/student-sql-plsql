@@ -1,0 +1,16 @@
+DECLARE
+	num_row number_table%ROWTYPE;
+BEGIN
+	select *
+	into num_row
+	from number_table;
+	dbms_output.put_line(1/num_row.num);
+EXCEPTION
+	WHEN NO_DATA_FOUND THEN
+		dbms_output.put_line('No data!');
+	WHEN TOO_MANY_ROWS THEN
+		dbms_output.put_line('Too many!');
+	WHEN OTHERS THEN
+		dbms_output.put_line(‘Error’);
+END;
+/

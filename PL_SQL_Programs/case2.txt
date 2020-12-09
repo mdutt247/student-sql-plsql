@@ -1,0 +1,26 @@
+set serveroutput on;
+declare
+empno emp.emp_no%type;
+a1 number(5);
+salary number(10);
+job1 varchar2(15);
+begin
+empno :=&empno;
+salary :=&salary;
+case 
+when salary>=8000 and salary<=10000 
+then job1 := 'Clerk';
+when salary>10000 and salary<=20000 
+then job1 := 'Officer';
+when salary>20000 
+then job1 :='Asst Manager';
+end case;
+select count(emp_no) into a1 from emp where emp_no=empno;
+if a1>=1 then
+dbms_output.put_line('Employee already exist!!');
+else
+insert into emp(emp_no,emp_job) values(empno,job1);
+dbms_output.put_line('Inserted ' || empno || '  ' || job1);
+end if;
+end;
+/

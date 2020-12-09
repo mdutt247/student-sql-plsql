@@ -1,0 +1,6 @@
+select a,
+case
+when b='*' then 'star'
+when b='-' then 'minus'
+end
+from test;

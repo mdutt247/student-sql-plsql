@@ -1,0 +1,33 @@
+/*
+• Modes:
+– IN: procedure must be called with a value for the parameter.
+Value cannot be changed
+– OUT: procedure must be called with a variable for the
+parameter. Changes to the parameter are seen by the user
+(i.e., call by reference)
+– IN OUT: value can be sent, and changes to the parameter
+are seen by the user
+• Default Mode is: IN
+*/
+
+--Creating the procedure
+/*
+create or replace procedure num_logged
+(person IN mylog.who%TYPE, num OUT mylog.logon_num%TYPE) IS
+BEGIN
+select logon_num
+into num
+from mylog
+where who = person;
+END;
+/
+*/
+--Calling the procedure
+
+declare
+howmany mylog.logon_num%TYPE;
+begin
+num_logged('pete',howmany);
+dbms_output.put_line(howmany);
+end;
+/

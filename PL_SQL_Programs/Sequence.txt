@@ -1,0 +1,21 @@
+--Creating Sequence
+
+Create Sequence mySeq
+Start with 10
+Increment By 5
+Maxvalue 1000
+Cycle;
+
+--Alering a sequence
+
+Alter Sequence mySeq
+Increment By 3;
+
+--Using Sequence
+
+Insert Into myTable values(mySeq.Nextval,'col2');
+
+--Dropping Sequence
+
+Drop Sequence mySeq;
+

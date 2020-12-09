@@ -1,0 +1,21 @@
+SQL TO SEE DIFFERENT TYPE OF OBJECTS
+
+
+select object_name, object_type
+from user_objects
+where object_type in ( 'TABLE', 'PROCEDURE', 'FUNCTION','PACKAGE', 'PACKAGE BODY' )
+and rownum < 50;
+
+
+SQL TO SEE SOURCE OF AN OBJECT
+
+
+SELECT TEXT 
+  FROM ALL_SOURCE
+ WHERE NAME = 'SQUARENUMBER';
+
+
+
+SET LINESIZE 132
+SET LONG 4000
+SELECT TRIGGER_BODY from user_triggers where trigger_name = 'FOO_TRIGGER'

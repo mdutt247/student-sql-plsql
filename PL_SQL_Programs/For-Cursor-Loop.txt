@@ -1,0 +1,8 @@
+DECLARE
+	cursor c is select * from number_table;
+BEGIN
+	for num_row in c loop
+	insert into doubles_table values(num_row.num*2);
+	end loop;
+END;
+/

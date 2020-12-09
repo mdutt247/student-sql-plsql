@@ -1,0 +1,30 @@
+1) Display THE NUMBER OF packages developed in EACH language.
+2) Display THE NUMBER OF packages developed by EACH person.
+3) Display THE NUMBER OF male and female programmer.
+4) Display THE COSTLIEST packages and HIGEST selling developed in EACH language.
+5) Display THE NUMBER OF people BORN in EACH YEAR.
+6) Display THE NUMBER OF people JOINED in EACH YEAR.
+7) Display THE NUMBER OF people BORN in EACH MONTH.
+8) Display THE NUMBER OF people JOINED in EACH MONTH.
+9) Display the language wise COUNTS of prof1.
+10) Display the language wise COUNTS of prof2.
+11) Display THE NUMBER OF people in EACH salary group.
+12) Display THE NUMBER OF people who studied in EACH institute.
+13) Display THE NUMBER OF people who studied in EACH course.
+14) Display the TOTAL development COST of the packages developed in EACH language.
+15) Display the selling cost of the package developed in EACH language.
+16) Display the cost of the package developed by EACH programmer.
+17) Display the sales values of the package developed in EACH programmer.
+18) Display the NUMBER of packages developed by EACH programmer.
+19) Display the sales COST of packages developed by EACH programmer language wise.
+20) Display EACH programmers name, costliest package and cheapest packages developed by Him/Her.
+21) Display EACH language name with AVERAGE development cost, AVERAGE cost, selling cost and AVERAGE price per copy.
+22) Display EACH institute name with NUMBER of courses, AVERAGE cost per course.
+23) Display EACH institute name with NUMBER of students. 
+24) Display names of male and female programmers. 
+25) Display the programmer's name and their packages. 
+26) Display the NUMBER of packages in EACH language.
+27) Display the NUMBER of packages in EACH language for which development cost is less than 1000.
+28) Display the AVERAGE difference BETWEEN scost and dcost for EACH language.
+29) Display the TOTAL scost, dcsot and amount TOBE recovered for EACH programmer for whose dcost HAS NOT YET BEEN recovered.
+30) Display highest, lowest and average salaries for THOSE earning MORE than 2000. 

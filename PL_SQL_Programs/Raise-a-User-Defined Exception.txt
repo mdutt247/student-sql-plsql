@@ -1,0 +1,21 @@
+DECLARE
+	less_than_target EXCEPTION;
+	sman_no salesman_master.salesman_no%TYPE;
+	tgt_sales salesman_master.tgt_to_get%TYPE;
+	act_sales salesman_master.ytd_sales%TYPE;
+	comm_rate salesman_master.rate_of_commission%TYPE;
+BEGIN
+	SELECT salesman_no, rate_of_commision, tgt_to_get, ytd_sales
+		INTO sman_no, comm_rate, tgt_sales, act_sales
+		FROM salesman_master
+		WHERE salesman_no = &sman_no;
+	
+	IF act_sales < tgt_sales THEN
+		RAISE less_than_target;
+	ELSE
+		INSERT INTO commission_payable 
+		VALUES(sman_no, sysdate, act_sales * comm_rate/100);
+	END IF;
+EXCEPTION
+	WHEN less_than_target THEN
+		DBMS_OUTPUT.PUT_LINE('Salesman No ' || sman_no || ' is not entitled to get commission');

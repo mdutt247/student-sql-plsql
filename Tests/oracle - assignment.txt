@@ -1,0 +1,19 @@
+Assignment No 1         (Date given: Feb 21, 2018)        (Date of submission: Feb 26, 2018)
+
+Q1. What is database? Explain the use of database.
+Q2. What are the distingushing features of a DBMS? List out the difference between DBMS and RDBMS.
+Q3. Define the following terms in brief
+	a. Table
+	b. Entity
+	c. Attribute
+Q4. What does SQL stand for? Why is it called a 4th Generation language?
+Q5. Which feature does SQL not support as a language?
+Q6. Explain the classification of SQL statements.
+Q7. What is the purpose of specifying data type for a column?
+Q8. List the various data type supported by Oracle.
+Q9. DATE data type stores date as well as time. How to view the time from a stored date value?
+Q10. How to input time in date column?
+Q11. If we want to store 2GB of character data then which data type should be used and why?
+Q12. Which data types are available for storing binary data like  images, videos, etc.?
+
+Note: Even though many of you will be busy in different activities, if you want to finsh it, you can do it.

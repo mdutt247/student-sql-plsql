@@ -1,0 +1,15 @@
+set serveroutput on
+declare
+per number(3) := &per;
+begin
+if per >=80 then
+dbms_output.put_line('Bahut accha');
+elsif per>=60 then
+dbms_output.put_line('accha');
+elsif per>=40 then
+dbms_output.put_line('kharab');
+else
+dbms_output.put_line('bahut kharab');
+end if;
+end;
+/

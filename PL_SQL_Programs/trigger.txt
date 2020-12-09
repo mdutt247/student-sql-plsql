@@ -1,0 +1,61 @@
+CREATE TABLE CLIENT_MASTER
+(
+CLIENT_NO VARCHAR2(6) PRIMARY KEY,
+NAME VARCHAR2(20) NOT NULL,
+ADDRESS1 VARCHAR2(30),
+ADDRESS2 VARCHAR2(30),
+CITY VARCHAR2(15),
+STATE VARCHAR2(15),
+PINCODE NUMBER(6),
+BAL_DUE NUMBER(10,2)
+);
+
+--INSERT DATA IN CLIENT_MASTER
+ 
+CREATE TABLE AUDITCLIENT
+(
+CLIENT_NO VARCHAR2(6),
+NAME VARCHAR2(20),
+BAL_DUE NUMBER(10,2),
+OPERATION VARCHAR2(8),
+USERID VARCHAR2(20),
+ODATE DATE
+);
+
+--DON'T INSERT ANY DATA IN AUDITCLIENT
+
+PROBLEM: Create a transparent audit systen for a table CLIENT_MASTER. The system must keep track
+-------- of the records that are being deleted or updated. The functionality being when a record is deleted or modified the original record details and the date of operation are stored in the audit table, then the delete or update is allowed to go through.
+
+SOLUTION:
+---------
+This trigger is fired when an update or delete is fired on the table client_master. The trigger
+first checks for the operation being performed on the table. Then depending on the operation
+being performed, a variable is assigned the value 'update' or 'delete'. Previous values of the
+modified record of the table client_master are stored into appropriate variables declared. The
+contents of these variables are then inserted into the audit table auditclient.
+
+
+CREATE TRIGGER audit_trial
+	AFTER UPDATE OR DELETE ON client_master
+	FOR EACH ROW
+DECLARE
+	oper varchar2(8);
+	client_no varchar2(6);
+	name varchar2(20);
+	bal_due number(10,2);
+BEGIN
+	IF updating THEN
+		oper := 'update';
+	END IF;
+	
+	IF deleting THEN
+		oper := 'delete';
+	END IF
+
+	client_no := :old.client_no;
+	name := :old.name
+	bal_due := :old.bal_due;
+	INSERT INTO auditclient
+	VALUES(client_no, name, bal_due, oper, user, sysdate);
+END;

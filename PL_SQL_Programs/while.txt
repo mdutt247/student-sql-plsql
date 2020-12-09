@@ -1,0 +1,13 @@
+SET Serveroutput ON
+
+declare
+a number(2);
+begin
+a:=1;
+while a<=10
+loop
+dbms_output.put_line(a || ' Hello');
+a:=a+1;
+end loop;
+end;
+/

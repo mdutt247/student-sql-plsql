@@ -1,0 +1,30 @@
+1) Display the details of THOSE WHO are drawing the same salary.
+2) Display the details of software developed by male programmers earing MORE than 3000.
+3) Display details of packages developed in PASCAL by female programmers.
+4) Display the details of these programmer WHO joined BEFORE 1990. 
+5)Display details of software developed in C by female programmers of  PRAGATHI.
+6) Display NUMBER of packages NUMBER of copies sold and sales value of EACH programmer Institute-wise.
+7) Display details of software developed in DBASE by male programmers WHO belong  to the institute on which  MOST NUMBER OF programmers studies.
+8) Display the details of the software that was developed by male programmers born BEFORE 1965 and female programmers born AFTER 1975.
+9) Display the details of the software that was developed in the language that is NOT the programmers first proficiency.  
+10) Display details of software that was developed in the language which is NITHER first NOR second proficiency of the programmer.
+11) Display details of software developed by male students of SABHARI.
+12) Display the names of programmers WHO HAVE NOT developed any package.
+13) What is the total cost of the software developed by the programmers by  APPLE?
+14) Who are the programmers WHO JOINED in the same day?
+15) Who are the programmers WHO HAVE THE SAME PROF2?
+16) Display the total sales values of software, institutes-wise.
+17) In which institutes did the person who developed the COSTLIEST package study?
+18) Which language listed in prof1 and prof2 HAS NOT BEEN used to develop any package? 
+19) How much does the person WHO developed the HIGHEST selling package earn and WHAT  course did he/she undergo?
+20) How many months will it take for each programmer to recover the cost of the course  underwent?
+21) Which is the COSTLIEST package developed by a person with under 3 years expenence?
+22) What is the AVERAGE salary for those WHOSE software's sales value is more than 50,000?
+23) How many packages were developed by the students WHO studied in the institute that  Charge the LOWEST course fee?
+24) How many packages were developed by the person WHO developed the CHEAPEST package. Where did he\she study?
+25) How many packages were developed by female programmers earning MORE than the HIGHEST  paid male programmer?
+26) How many packages were developed by the MOST experienced programmers from BDPS.
+27) List the programmers (from software table) and institutes they studied, including those WHO DIDN'T develop any package.
+28) List each profit with the number of programmers having that prof1 and the number  of packages developed in that prof1.
+29) List programmer names (from programmer table) and number of packages EACH developed. 
+30) List all the details of programmers who has done a course at S.S.I.L.

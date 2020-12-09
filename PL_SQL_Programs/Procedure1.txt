@@ -1,0 +1,47 @@
+--Procedure to get square of given number
+
+create or replace procedure squareN(num in number)
+IS
+s number;
+begin
+s :=num*num;
+dbms_output.put_line('Square of ' || num || ' is: ' || s);
+end;
+/
+
+--usage
+
+begin
+squareN(5);
+end;
+/
+
+--usage2
+call squareN(8);
+
+
+--Procedure to add two numbers
+
+CREATE OR REPLACE PROCEDURE add_numbers(a IN  NUMBER, b IN  NUMBER)
+IS
+c NUMBER;
+BEGIN
+  c := a + b;
+dbms_output.put_line('Sum of ' || a || ' and ' || b || ' is: ' || c);
+END;
+/
+
+--usage
+
+BEGIN
+add_numbers(10, 12);
+END;
+/
+
+--usage2
+
+CALL add_numbers(3, 7);
+
+--To see compilation errors
+
+select text from user_errors;

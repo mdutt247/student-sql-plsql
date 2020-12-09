@@ -1,0 +1,12 @@
+DECLARE
+	cursor c is select * from number_table;
+	cVal c%ROWTYPE;
+BEGIN
+	open c;
+	LOOP
+		fetch c into cVal;
+		EXIT WHEN c%NOTFOUND;
+		insert into doubles values(cVal.num*2);
+	END LOOP;
+END;
+/

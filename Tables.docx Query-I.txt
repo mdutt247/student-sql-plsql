@@ -1,0 +1,50 @@
+1) Find out the SELLING COST AVERAGE for the packages developed in PASCAL?
+2) Display the names and ages of all programmers.
+3) Display the names and ages of all the programmers
+4) What is the highest numbers of copies sold by a package?
+5) Display the names and date of birth of all the programmer born in JANUARY.
+6) Display lowest course fee.
+7) How many programmer has done PGDCA course.
+8) How much revenue has been earned through sales of packages in C.
+9) Display the details of software developed by Ramesh?
+10) How many programmers studied at SABHARI.
+11) Display the details of PACKAGES whose sales crossed the 20000 mark.
+12) Find out the number of copies which should be sold in order to recover the development cost of each package.
+13) What is the price of the costliest software developed in BASIC?
+14) Display the details of packages for which development cost has been recovered.
+15) How many packages were developed in dbase?
+16) How many programmers studies at paragathi?
+17) How many programmers paid 5000 to 10000 for their course?
+18) What is the average course fee?
+19) Display the details of programmers knowing c?
+20) How many programmers know either Cobol or Pascal?
+21) How many programmers don't know Pascal & C?
+22) How old is the oldest male programmers?
+23) What is the average age of female programmers?
+24) Calculate the experience in years for each programmers and display along with the names in descending order?
+25) Who are the programmers who celebrate their birthday during the current month?
+26) How many female programmers are there?
+27) What are the languages known by the male programmers?
+28) What is the Average salary?
+29) How many people draw 2000 to 4000?
+30) Display the details of those who don't know Clipper, Cobol or Pascal?
+31) How many Female programmers knowing C are above 24 years of age?
+32) Who are the programmers who will be celebrating their Birthday within a week?
+33 Display the details of those with less than a year's experience?
+34 Display the details of those who will be completing 2 years of service this year?
+35 Calculate the amount to be recovered for those packages whose development cost has not been recovered?
+36)ist the packages which have not been sold so far?
+37) Find out the cost of the software developed by Mary?
+38) Display the institutes names from the studies table without duplicates?
+39) How many different courses are mentioned in the studies table?
+40) Display the names of the programmers whose names contain 2 occurrences of the letter A?
+41) Display the names of programmers whose names contain unto 5 characters?
+42) How many female programmers knowing COBOL have more than 2 years experience?
+43) What is the length of the shortest name in the programmer table?
+44) What is the average development cost of a package developed in COBOL?
+45) Display the name,sex,dob(DD/MM/YY format), doj for all the programmers without using conversion function?
+46) Who are the programmers who were born on the last day of the month?
+47) What is the amount paid in salaries of the male programmers who do not know Cobol?
+48) Display the title, scost, dcost and difference between scost and dcost in descending order of difference?
+49) Display the name, dob, doj of those month of birth and month of joining are same?
+50) Display the names of the packages whose names contain more than 1 word?

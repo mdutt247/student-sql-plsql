@@ -1,0 +1,22 @@
+set serveroutput on
+set verify off
+declare
+a number(10);
+b number(10);
+c number(10);
+msg varchar2(20);
+begin
+a:=&number1;
+b:=&number2;
+c:=&number3;
+dbms_output.put_line(' - - - - - - - - - - - - ');
+if(a>b) and (a>c) then
+dbms_output.put_line(a || ' is greatest of three.');
+elsif(b>a) and (b>c) then
+dbms_output.put_line(b || ' is greatest of three.');
+elsif(c>a) and (c>b) then
+dbms_output.put_line(c || ' is greatest of three.');
+end if;
+dbms_output.put_line(' - - - - - - - - - - - - ');
+end;
+/

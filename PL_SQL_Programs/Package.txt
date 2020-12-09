@@ -1,0 +1,109 @@
+CREATE TABLE ITEM_MASTER
+(
+ITEMID NUMBER(4) PRIMARY KEY,
+DESCRIPTION VARCHAR2(20),
+BAL_STOCK NUMBER(3)
+);
+
+CREATE TABLE ITEM_TRANSACTION
+(
+ITEMID NUMBER(4),
+DESCRIPTION VARCHAR2(20),
+QTY NUMBER(3)
+);
+
+Based on the ITEMID in the ITEM_TRANSACTION table a check is made in the ITEM_MASTER table to
+see if the ITEMID exists in the ITEM_MASTER table or not.
+
+1. If the ITEMID does not exist then an insert operation is performed and the ITEMID along with
+   the DESCRIPTION and QTY is inserted into the required columns of the ITEM_MASTER table.
+
+2. If the ITEMID exists then a modify operation is performed and the qty is updated with the
+   BAL_STOCK column of the table ITEM_MASTER where ITEMID of table ITEM_MASTER is same as that
+   of ITEM_TRANSACTION.
+
+
+To achieve this, a package composition of:
+
+1. A function, which will check, for the existence of ITEMID in the table ITEM_MASTER. The
+   function must have one argument which receives a value for which a matching pattern of ITEMID
+   in the table ITEM_MASTER. The function will return value '1' indicating that a match is found
+   and a value '0' indicating that no match is found. This value returned by the function can be
+   used to perform the above operation.
+
+2. A procedure that shall insert values in the ITEM_MASTER table in case the ITEMID does not       exist in the ITEM_MASTER table.
+
+3. A procedure that shall update values in the ITEM_MASTER table in case the ITEMID already       exists in the ITEM_MASTER table.
+
+----------------------
+Package Specification:
+----------------------
+
+CREATE OR REPLACE PACKAGE check_data AS
+	FUNCTION f_itemidchk(vitemidno IN number) RETURN number;
+	PROCEDURE proc_update(vitemidno IN number, quantity IN number);
+	PROCEDURE proc_insert(vitemidno IN number, quantity IN number, descrip IN varchar2);
+END check_data; -- End of package specification
+
+-------------
+Package Body:
+-------------
+
+CREATE OR REPLACE PACKAGE check_data IS
+	FUNCTION f_itemidchk(vitemidno IN number) RETURN number IS
+		dummyitem number(4);
+	BEGIN
+			SELECT itemid INTO dummyitem
+			FROM item_master WHERE itemid = vitemid;
+			RETURN 1;
+	EXCEPTION
+			WHEN no_data_found THEN
+			RETURN 0;
+	END;  			-- End of function
+
+	PROCEDURE proc_insert(vitemidno IN number, quantity IN number, descrip IN varchar2) IS
+	BEGIN
+			INSERT INTO item_master(itemid, bal_stock, description)
+			VALUES(vitemidno, quantity, descrip);
+	END;  			-- End of procedure
+ 
+	PROCEDURE proc_update(vitemidno IN number, quantity IN number) IS
+	BEGIN
+			UPDATE item_master SET item_master.bal_stock = quantity
+			WHERE itemid = vitemidno;
+	END;  			-- End of procedure
+END check_data;  	-- End of package body
+
+---------------------------------------------
+Calling the package in the PL/SQL code block:
+---------------------------------------------
+
+DECLARE
+	CURSOR scannable IS
+		SELECT itemid, qty, description
+		FROM item_transaction;
+	vitemidno number(4);
+	descrip varchar2(30);
+	quantity number(3);
+	valexists number(1);
+BEGIN
+	OPEN scannable;
+	LOOP
+		FETCH scannable INTO vitemidno,quantity,descrip;
+
+		EXIT WHEN scannable%NOTFOUND;
+
+		valexists := check_data.f_itemidchk(vitemidno);
+		DBMS_OUTPUT.PUT_LINE(TO_CHAR(valexists));
+
+		IF valexists = 0 THEN
+			check_data.proc_insert(vitemidno,quantity,descrip);
+		ELSE
+			check_data.proc_update(vitemidno,quantity);
+		END IF;
+	END LOOP;
+
+	CLOSE scannable;
+
+	COMMIT;
+END;

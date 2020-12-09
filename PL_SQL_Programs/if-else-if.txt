@@ -1,0 +1,17 @@
+DECLARE
+	a number;
+	msg varchar2(50);
+BEGIN
+	a:= &percentage;
+	if a >= 60 then 
+	msg := 'First class';
+	elsif a >=50 then 
+	msg := 'Second class';
+	elsif a >=40 then 
+	msg := 'Third class';
+	else
+	msg := 'Fail class';
+	end if;
+dbms_output.put_line(msg);
+END;
+/

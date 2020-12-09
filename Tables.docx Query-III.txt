@@ -1,0 +1,38 @@
+1) Who is the highest paid C programmer?
+2) Who is the highest paid female cobol programmer?
+3) Display the name of the HIGEST paid programmer for EACH language (prof1)
+4) Who is the LEAST experienced programmer?
+5) Who is the MOST experienced programmer?
+6) Which language is known by ONLY ONE programmer?
+7) Who is the YONGEST programmer knowing DBASE?
+8) Which institute has MOST NUMBER of students?
+9) Who is the above programmer?
+10) Which female programmer earns MORE than 3000/- but DOES NOT know C, C++, Oracle or Dbase?
+11) Which is the COSTLIEST course?
+12) Which course has been done by MOST of the students?
+13) Display name of the institute and course Which has below AVERAGE course fee?
+14) Which institute conducts COSTLIEST course?
+15) Which course has below AVERAGE number of students?
+16) Which institute conducts the above course?
+17) Display names of the course WHOSE fees are within 1000(+ or -) of the AVERAGE fee.
+18) Which package has the HIGEST development cost?
+19) Which package has the LOWEST selling cost?
+20) Who developed the package, which has sold the LEAST number of copies?
+21) Which language was used to develop the package WHICH has the HIGEST sales amount?
+22) How many copies of the package that has the LEAST DIFFRENCE between development and selling cost were sold?
+23) Which is the COSTLIEAST package developed in PASCAL?
+24) Which language was used to develop the MOST NUMBER of package?
+25) Which programmer has developed the HIGEST NUMBER of package?
+26) Who is the author of the COSTLIEST package?
+27) Display names of packages WHICH have been sold LESS THAN the AVERAGE number of copies?
+28) Who are the female programmers earning MORE than the HIGEST paid male programmers?
+29) Which language has been stated as prof1 by MOST of the programmers?
+30) Who are the authors of packages, WHICH have recovered MORE THAN double the development cost?
+31) Display programmer names and CHEAPEST package developed by them in EACH language?
+32) Who is the YOUNGEST male programmer born in 1965?
+33) Display language used by EACH programmer to develop the HIGEST selling and LOWEST selling package.
+34) Who is the OLDEST female programmer WHO joined in 1992
+35) In WHICH year where the MOST NUMBER of programmer born?
+36) In WHICH month did MOST NUMBRER of programmer join?
+37) In WHICH language are MOST of the programmer's proficient?
+38) Who are the male programmers earning BELOW the AVERAGE salary of female programmers?

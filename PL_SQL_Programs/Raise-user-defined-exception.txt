@@ -1,0 +1,16 @@
+DECLARE
+	e_number1 EXCEPTION;
+	cnt NUMBER;
+BEGIN
+	select count(*)
+	into cnt
+	from number_table;
+	
+	IF cnt = 1 THEN RAISE e_number1;
+	ELSE dbms_output.put_line(cnt);
+	END IF;
+EXCEPTION
+	WHEN e_number1 THEN
+		dbms_output.put_line('Count = 1');
+END;
+/

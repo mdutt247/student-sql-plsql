@@ -1,0 +1,21 @@
+set serveroutput on
+set verify off
+
+
+DECLARE 
+    --n number := &n; --GENERATE FIBONACCI SERIES UPTO 'n' NUMBERS
+    n number :=10; --GENERATE FIBONACCI SERIES FOR FIRST 10 NUMBERS
+    t1 number := 0; 
+    t2 number := 1; 
+    t3 number; 
+BEGIN 
+    dbms_output.put_line(t1); 
+    dbms_output.put_line(t2); 
+    for i in 3..n loop 
+     t3 := t1 + t2; 
+     dbms_output.put_line(t3); 
+     t1 := t2; 
+     t2 := t3; 
+    end loop; 
+END; 
+/
